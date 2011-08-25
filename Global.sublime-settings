@@ -1,0 +1,15 @@
+// Place user-specific overrides in this file, to ensure they're preserved
+// when upgrading
+{
+  "remember_open_folders": true,
+  "remember_open_files": true,
+  "folder_exclude_patterns": [".git", ".bundle"],
+  "file_exclude_patterns": [".DS_Store"],
+  "new_window_settings":
+  {
+    "side_bar_visible": true,
+    "status_bar_visible": true,
+    "show_tabs": true,
+    "show_minimap": true
+  }
+}
