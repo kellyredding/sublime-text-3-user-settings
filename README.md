@@ -5,10 +5,14 @@ These are the settings I use.  There are no dependencies right now.
 ## Install
 
 1. Go to your Packages directory
+
 	cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
-1. Clone this like so:
+
+2. Clone this like so:
+
 	git clone https://github.com/kelredd/sublime-text-2-user-settings.git User
-1. Enjoy!
+
+3. Enjoy!
 
 ## Warning
 
