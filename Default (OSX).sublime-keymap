@@ -1,2 +1,3 @@
 [
+    { "keys": ["command+d"], "command": "restart_passenger", "args": {}, "context": [] }
 ]
