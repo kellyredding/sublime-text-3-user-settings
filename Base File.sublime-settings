@@ -14,5 +14,8 @@
 	"scroll_past_end": true,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": true
+	"word_wrap": true,
+	"draw_indent_guides": true,
+
+	"vintage_start_in_command_mode": false
 }

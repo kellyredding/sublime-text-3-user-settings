@@ -1,5 +1,10 @@
 {
-  "rulers": [80],
-  "tab_size": 2
-
+	"extensions":
+	[
+	],
+	"rulers":
+	[
+		80
+	],
+	"tab_size": 2
 }

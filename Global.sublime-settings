@@ -11,5 +11,6 @@
     "status_bar_visible": true,
     "show_tabs": true,
     "show_minimap": true
-  }
+  },
+  "ignored_packages": []
 }
