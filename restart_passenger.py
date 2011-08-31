@@ -6,7 +6,6 @@ class RestartPassengerCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
         for folder in self.view.window().folders():
-            self.view.insert(edit, 0, str(folder))
             fname = os.path.join(str(folder), 'tmp', 'restart.txt')
             if os.path.exists(os.path.dirname(fname)):
                 with file(fname, 'a'):
