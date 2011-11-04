@@ -20,6 +20,7 @@
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true,
 	"draw_indent_guides": true,
+	"fold_buttons": false,
 
 	"vintage_start_in_command_mode": false
 }
