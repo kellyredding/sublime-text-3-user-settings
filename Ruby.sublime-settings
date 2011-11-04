@@ -1,6 +1,10 @@
 {
 	"extensions":
 	[
+		"rb",
+		"ru",
+		"Gemfile",
+		"Rakefile"
 	],
 	"rulers":
 	[
