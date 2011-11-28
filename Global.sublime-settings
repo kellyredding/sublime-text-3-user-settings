@@ -13,5 +13,6 @@
     "show_minimap": true,
     "hide_open_files": true
   },
+  "use_simple_full_screen": true,
   "ignored_packages": ["Vintage"]
 }
