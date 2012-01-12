@@ -16,11 +16,16 @@
 	"match_brackets_square": true,
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
+	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true,
 	"draw_indent_guides": true,
 	"fold_buttons": false,
 
-	"vintage_start_in_command_mode": false
+	"vintage_start_in_command_mode": false,
+
+	"sublimelinter": false,
+
+	"auto_complete_commit_on_tab": true
 }
