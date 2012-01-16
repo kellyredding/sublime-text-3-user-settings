@@ -27,5 +27,6 @@
 
 	"sublimelinter": false,
 
-	"auto_complete_commit_on_tab": true
+	"auto_complete_commit_on_tab": true,
+	"auto_complete": false
 }
