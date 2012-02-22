@@ -5,22 +5,46 @@
 	"detect_indentation": true,
 	"draw_indent_guides": true,
 	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store"
+	],
 	"find_selected_text": true,
 	"fold_buttons": false,
+	"folder_exclude_patterns":
+	[
+		".git",
+		".bundle"
+	],
 	"font_face": "monaco",
 	"font_size": 11.0,
 	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"match_brackets": true,
 	"match_brackets_angle": false,
 	"match_brackets_braces": true,
 	"match_brackets_content": true,
 	"match_brackets_square": true,
+	"new_window_settings":
+	{
+		"hide_open_files": true,
+		"show_minimap": true,
+		"show_tabs": true,
+		"side_bar_visible": true,
+		"status_bar_visible": true
+	},
+	"remember_open_files": true,
+	"remember_open_folders": true,
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"sublimelinter": false,
 	"tab_size": 2,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
+	"use_simple_full_screen": true,
 	"vintage_start_in_command_mode": false,
 	"word_wrap": true
 }
