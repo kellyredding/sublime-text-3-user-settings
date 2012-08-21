@@ -1,10 +1,9 @@
 {
-	"auto_upgrade_last_run": 1329948166,
+	"auto_upgrade_last_run": 1345561146,
 	"installed_packages":
 	[
 		"Git",
 		"Package Control",
-		"SublimeLinter",
 		"Terminal"
 	]
 }
