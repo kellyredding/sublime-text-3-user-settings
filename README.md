@@ -4,17 +4,31 @@ These are the settings I use.  There are no dependencies right now.
 
 ## Install
 
-Go to your Packages directory
+Go to your Packages directory:
 
-	cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+```
+cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+```
 
+Clone as your `User` packages:
 
-Clone this like so:
+```
+git clone https://github.com/kellyredding/sublime-text-2-user-settings.git User
+```
 
-	git clone https://github.com/kelredd/sublime-text-2-user-settings.git User
+## Updating
 
+Go to your User Packages directory:
 
-Enjoy!
+```
+cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+```
+
+Pull on the repo:
+
+```
+git pull
+```
 
 ## Warning
 

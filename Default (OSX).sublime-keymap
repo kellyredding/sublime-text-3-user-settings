@@ -1,5 +1,5 @@
 [
-    { "keys": ["command+d"], "command": "restart_passenger", "args": {}, "context": [] },
+    { "keys": ["command+d"], "command": "refresh", "args": {}, "context": [] },
     { "keys": ["super+shift+alt+t"], "command": "open_terminal" },
     { "keys": ["super+shift+t"], "command": "open_terminal_project_folder" }
 ]
