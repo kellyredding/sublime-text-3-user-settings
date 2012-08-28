@@ -4,40 +4,74 @@ import os, subprocess
 class RefreshCommand(sublime_plugin.TextCommand):
     """ Refresh the project """
 
-    status_msg = ""
     label = "REFRESH: "
     base_cmd = "source ~/.bash_profile && "
+    status_msg = ""
+
+    folder = None
+    cmd = None
+    callback = None
+
+    # will only run if there is one (1) project folder in the window
+    # runs asynchronously for real-time status updates (useful for
+    # long running refreshes)
+
+    # First runs `rebuild_jekyll`, then runs `restart_rack`
 
     def run(self, edit):
-        self.status_msg = ""
-        self.set_status(self.label)
-        sublime.set_timeout(self.start_refresh, 1)
+        folders = self.view.window().folders()
+        if len(folders) == 1:
+            self.status_msg = ""
+            self.set_status(self.label)
+            self.folder = str(folders.pop())
 
-    def start_refresh(self):
-        for folder in self.view.window().folders():
-            f = str(folder)
+            self.rebuild_jekyll()
+        elif len(folders) == 0:
+            self.set_status("no project folders to refresh, ")
+            self.finish_refresh()
+        else:
+            self.set_status("can't refresh more than one project folder, ")
+            self.finish_refresh()
 
-            # jekyll rebuild: `bundle exec jekyll --no-auto --no-server`
-            if os.path.exists(os.path.join(f, '_config.yml')):
-                self.run_cmd(f, "bundle exec jekyll --no-auto --no-server")
+    def finish_refresh(self):
+        if self.status_msg == self.label:
+            self.set_status("nothing needed.")
+        else:
+            self.set_status("done.")
 
-            # Rack restart: `touch tmp/restart.txt`
-            if os.path.exists(os.path.join(f, 'config.ru')):
-                self.run_cmd(f, "mkdir -p tmp && touch tmp/restart.txt")
+    # action methods
 
-            # Summary message
-            if self.status_msg == self.label:
-                self.set_status("nothing needed.")
-            else:
-                self.set_status("done.")
+    def rebuild_jekyll(self):
+        cmd = "bundle exec jekyll --no-auto --no-server"
+        callback = self.restart_rack
+        if os.path.exists(os.path.join(self.folder, '_config.yml')):
+            self.setup_cmd(cmd, callback)
+        else:
+            callback()
 
-    def run_cmd(self, folder, cmd):
-        self.set_status("`" + cmd + "`, ")
+    def restart_rack(self):
+        cmd = "mkdir -p tmp && touch tmp/restart.txt"
+        callback = self.finish_refresh
+        if os.path.exists(os.path.join(self.folder, 'config.ru')):
+            self.setup_cmd(cmd, callback)
+        else:
+            callback()
+
+    # private methods
+
+    def setup_cmd(self, cmd, callback):
+        self.set_status("`" + cmd + "`... ")
+        self.cmd = cmd
+        self.callback = callback
+        sublime.set_timeout(self.run_cmd, 1)
+
+    def run_cmd(self):
         try:
-            p = subprocess.Popen(self.base_cmd+cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=folder, shell=True)
+            p = subprocess.Popen(self.base_cmd+self.cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=self.folder, shell=True)
             result, err = p.communicate()
         except Exception as e:
             self.set_status(str(e))
+        self.callback()
 
     def set_status(self, msg):
         self.status_msg += msg
