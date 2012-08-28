@@ -4,40 +4,46 @@ import os, subprocess
 class RefreshCommand(sublime_plugin.TextCommand):
     """ Refresh the project """
 
-    def run(self, edit):
-        for folder in self.view.window().folders():
-            label = "REFRESH: "
-            status_msg = label
+    status_msg = ""
+    label = "REFRESH: "
 
+    def run(self, edit):
+        self.status_msg = ""
+        self.set_status(self.label)
+        sublime.set_timeout(self.run_folders, 1)
+
+    def run_folders(self):
+        for folder in self.view.window().folders():
             f = str(folder)
             c = "source ~/.bash_profile && "
 
             # jekyll rebuild: `bundle exec jekyll --no-auto --no-server`
             if os.path.exists(os.path.join(f, '_config.yml')):
                 cmd = "bundle exec jekyll --no-auto --no-server"
-                status_msg += "`" + cmd + "`, "
+                self.set_status("`" + cmd + "`, ")
                 try:
                     p = subprocess.Popen(c+cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=f, shell=True)
                     result, err = p.communicate()
-                    # status_msg += err
                 except Exception as e:
-                    status_msg += str(e)
+                    self.set_status(str(e))
 
             # Rack restart: `touch tmp/restart.txt`
             if os.path.exists(os.path.join(f, 'config.ru')):
                 cmd = "mkdir -p tmp && touch tmp/restart.txt"
-                status_msg += "`" + cmd + "`, "
+                self.set_status("`" + cmd + "`, ")
                 try:
                     p = subprocess.Popen(c+cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=f, shell=True)
                     result, err = p.communicate()
-                    # status_msg += err
                 except Exception as e:
-                    status_msg += str(e)
+                    self.set_status(str(e))
 
             # Summary message
-            if status_msg == label:
-                status_msg += "nothing needed."
+            if self.status_msg == self.label:
+                self.set_status("nothing needed.")
             else:
-                status_msg += "done."
+                self.set_status("done.")
 
-            sublime.status_message(status_msg)
+    def set_status(self, msg):
+        self.status_msg += msg
+        sublime.status_message(self.status_msg)
+
