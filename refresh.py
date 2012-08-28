@@ -6,42 +6,38 @@ class RefreshCommand(sublime_plugin.TextCommand):
 
     status_msg = ""
     label = "REFRESH: "
+    base_cmd = "source ~/.bash_profile && "
 
     def run(self, edit):
         self.status_msg = ""
         self.set_status(self.label)
-        sublime.set_timeout(self.run_folders, 1)
+        sublime.set_timeout(self.start_refresh, 1)
 
-    def run_folders(self):
+    def start_refresh(self):
         for folder in self.view.window().folders():
             f = str(folder)
-            c = "source ~/.bash_profile && "
 
             # jekyll rebuild: `bundle exec jekyll --no-auto --no-server`
             if os.path.exists(os.path.join(f, '_config.yml')):
-                cmd = "bundle exec jekyll --no-auto --no-server"
-                self.set_status("`" + cmd + "`, ")
-                try:
-                    p = subprocess.Popen(c+cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=f, shell=True)
-                    result, err = p.communicate()
-                except Exception as e:
-                    self.set_status(str(e))
+                self.run_cmd(f, "bundle exec jekyll --no-auto --no-server")
 
             # Rack restart: `touch tmp/restart.txt`
             if os.path.exists(os.path.join(f, 'config.ru')):
-                cmd = "mkdir -p tmp && touch tmp/restart.txt"
-                self.set_status("`" + cmd + "`, ")
-                try:
-                    p = subprocess.Popen(c+cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=f, shell=True)
-                    result, err = p.communicate()
-                except Exception as e:
-                    self.set_status(str(e))
+                self.run_cmd(f, "mkdir -p tmp && touch tmp/restart.txt")
 
             # Summary message
             if self.status_msg == self.label:
                 self.set_status("nothing needed.")
             else:
                 self.set_status("done.")
+
+    def run_cmd(self, folder, cmd):
+        self.set_status("`" + cmd + "`, ")
+        try:
+            p = subprocess.Popen(self.base_cmd+cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=folder, shell=True)
+            result, err = p.communicate()
+        except Exception as e:
+            self.set_status(str(e))
 
     def set_status(self, msg):
         self.status_msg += msg
