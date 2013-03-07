@@ -3,7 +3,7 @@
 {
   "remember_open_folders": true,
   "remember_open_files": true,
-  "folder_exclude_patterns": [".git", ".bundle"],
+  "folder_exclude_patterns": [],
   "file_exclude_patterns": [".DS_Store"],
   "new_window_settings":
   {
