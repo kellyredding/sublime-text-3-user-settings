@@ -6,7 +6,8 @@
 		"god",
 		"Gemfile",
 		"Rakefile",
-		"Vagrantfile"
+		"Vagrantfile",
+		"Guardfile"
 	],
 	"rulers":
 	[
