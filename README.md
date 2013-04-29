@@ -1,19 +1,19 @@
-# My Sublime Text 2 settings
+# My Sublime Text 3 settings
 
-These are the settings I use.  There are no dependencies right now.
+These are the settings I use.  There are no dependencies right now.  Note: this is a "fork" from my [Sublime Text **2** settings](https://github.com/kellyredding/sublime-text-2-user-settings).
 
 ## Install
 
 Go to your Packages directory:
 
 ```
-cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 ```
 
 Clone as your `User` packages:
 
 ```
-git clone https://github.com/kellyredding/sublime-text-2-user-settings.git User
+git clone https://github.com/kellyredding/sublime-text-3-user-settings.git User
 ```
 
 ## Updating
@@ -21,7 +21,7 @@ git clone https://github.com/kellyredding/sublime-text-2-user-settings.git User
 Go to your User Packages directory:
 
 ```
-cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
 ```
 
 Pull on the repo:
