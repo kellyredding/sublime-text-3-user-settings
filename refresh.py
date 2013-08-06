@@ -16,7 +16,7 @@ class RefreshCommand(sublime_plugin.TextCommand):
     # runs asynchronously for real-time status updates (useful for
     # long running refreshes)
 
-    # First runs `rebuild_jekyll`, then runs `restart_rack`
+    # First runs `rebuild_jekyll`, then `remove_logs`, then `restart_rack`
 
     def run(self, edit):
         folders = self.view.window().folders()
@@ -25,7 +25,7 @@ class RefreshCommand(sublime_plugin.TextCommand):
             self.set_status(self.label)
             self.folder = str(folders.pop())
 
-            self.rebuild_jekyll()
+            self.start_refresh()
         elif len(folders) == 0:
             self.set_status("no project folders to refresh, ")
             self.finish_refresh()
@@ -33,18 +33,23 @@ class RefreshCommand(sublime_plugin.TextCommand):
             self.set_status("can't refresh more than one project folder, ")
             self.finish_refresh()
 
-    def finish_refresh(self):
-        if self.status_msg == self.label:
-            self.set_status("nothing needed.")
-        else:
-            self.set_status("done.")
-
     # action methods
+
+    def start_refresh(self):
+        self.rebuild_jekyll()
 
     def rebuild_jekyll(self):
         cmd = "bundle exec jekyll --no-auto --no-server"
-        callback = self.restart_rack
+        callback = self.remove_logs
         if os.path.exists(os.path.join(self.folder, '_config.yml')):
+            self.setup_cmd(cmd, callback)
+        else:
+            callback()
+
+    def remove_logs(self):
+        cmd = "rm -f log/*.log"
+        callback = self.restart_rack
+        if os.path.exists(os.path.join(self.folder, 'log')):
             self.setup_cmd(cmd, callback)
         else:
             callback()
@@ -56,6 +61,12 @@ class RefreshCommand(sublime_plugin.TextCommand):
             self.setup_cmd(cmd, callback)
         else:
             callback()
+
+    def finish_refresh(self):
+        if self.status_msg == self.label:
+            self.set_status("nothing needed.")
+        else:
+            self.set_status("done.")
 
     # private methods
 
