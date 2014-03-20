@@ -1,6 +1,6 @@
 {
 	"auto_complete": false,
-	"auto_complete_commit_on_tab": true,
+	"auto_complete_commit_on_tab": false,
 	"color_scheme": "Packages/User/Twilight-Kelly.tmTheme",
 	"detect_indentation": true,
 	"draw_indent_guides": true,
@@ -46,5 +46,9 @@
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true,
 	"vintage_start_in_command_mode": false,
-	"word_wrap": true
+	"word_wrap": true,
+	"index_files": false,
+	"index_exclude_patterns": ["*.log", ".git"],
+	"enable_tab_scrolling": false,
+	"highlight_modified_tabs": true,
 }
