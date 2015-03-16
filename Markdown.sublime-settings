@@ -1,5 +1,10 @@
 {
-	"extensions":
-	[
-	]
+  // "color_scheme": "Packages/Theme - Afterglow/Afterglow-markdown.tmTheme",
+  "draw_centered": true,
+  "word_wrap": true,
+  "wrap_width": 80,
+
+  "extensions":
+  [
+  ]
 }

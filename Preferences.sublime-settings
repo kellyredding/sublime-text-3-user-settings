@@ -1,7 +1,17 @@
 {
+	"color_scheme": "Packages/User/Twilight-Kelly.tmTheme",
+
+	//https://github.com/YabataDesign/afterglow-theme
+	"theme": "Afterglow-blue.sublime-theme",
+	// "color_scheme": "Packages/Theme - Afterglow/Afterglow.tmTheme",
+	// "color_scheme": "Packages/Theme - Afterglow/Afterglow-twilight.tmTheme",
+	"tabs_small": true,
+	"status_bar_brighter": true,
+	"color_inactive_tabs": true,
+	"tabs_padding_small": true,
+
 	"auto_complete": false,
 	"auto_complete_commit_on_tab": false,
-	"color_scheme": "Packages/User/Twilight-Kelly.tmTheme",
 	"detect_indentation": true,
 	"draw_indent_guides": true,
 	"enable_tab_scrolling": false,
