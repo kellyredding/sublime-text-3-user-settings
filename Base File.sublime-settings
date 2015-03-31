@@ -1,6 +1,7 @@
 {
 	"auto_complete": false,
 	"auto_complete_commit_on_tab": true,
+	"auto_find_in_selection": true,
 	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
 	"detect_indentation": true,
 	"draw_indent_guides": true,
@@ -22,5 +23,5 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": false,
-	"word_wrap": true
+	"word_wrap": true,
 }
