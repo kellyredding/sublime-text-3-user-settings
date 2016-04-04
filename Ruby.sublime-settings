@@ -2,8 +2,10 @@
 	"extensions":
 	[
 		"rb",
-		"ru",
 		"nm",
+		"ru",
+		"sanford",
+		"qs",
 		"god",
 		"rabl",
 		"Gemfile",
