@@ -44,6 +44,7 @@
 		".git"
 	],
 	"index_files": false,
+	"binary_file_patterns": ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.ttf", "*.tga", "*.dds", "*.ico", "*.eot", "*.pdf", "*.swf", "*.jar", "*.zip", "*.log"],
 	"match_brackets": true,
 	"match_brackets_angle": false,
 	"match_brackets_braces": true,
