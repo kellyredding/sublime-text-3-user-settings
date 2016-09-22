@@ -64,6 +64,32 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Entity</string>
+			<key>scope</key>
+			<string>source.ruby meta.class.ruby entity.name.class.ruby support.other.namespace.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#9B703F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Entity</string>
+			<key>scope</key>
+			<string>source.ruby meta.module.ruby entity.name.module.ruby support.other.namespace.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#9B703F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Keyword</string>
 			<key>scope</key>
 			<string>keyword</string>
@@ -184,6 +210,19 @@
 			<string>♦ Entity inherited-class</string>
 			<key>scope</key>
 			<string>entity.other.inherited-class</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#9B5C2E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>♦ Entity inherited-namespace</string>
+			<key>scope</key>
+			<string>source.ruby meta.class.ruby entity.other.inherited-class.ruby support.other.namespace.ruby</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
