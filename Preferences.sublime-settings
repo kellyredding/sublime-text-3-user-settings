@@ -68,6 +68,7 @@
 	"remember_open_folders": true,
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
+	"show_definitions": false,
 	"sidebar_no_icon": true,
 	"status_bar_brighter": true,
 	"tab_size": 2,
