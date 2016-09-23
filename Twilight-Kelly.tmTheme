@@ -305,6 +305,19 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>♦ Support.function</string>
+			<key>scope</key>
+			<string>source.ruby support.function.builtin.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F8F8F8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>♦ Support.constant</string>
 			<key>scope</key>
 			<string>support.constant</string>
