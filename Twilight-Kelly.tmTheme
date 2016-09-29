@@ -64,6 +64,32 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Entity function</string>
+			<key>scope</key>
+			<string>source.ruby meta.function.ruby entity.name.function.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#9B703F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Entity global self</string>
+			<key>scope</key>
+			<string>source.ruby meta.function.ruby variable.language.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#9B703F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Entity</string>
 			<key>scope</key>
 			<string>source.ruby meta.class.ruby entity.name.class.ruby support.other.namespace.ruby</string>
@@ -93,6 +119,19 @@
 			<string>Keyword</string>
 			<key>scope</key>
 			<string>keyword</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#CDA869</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword</string>
+			<key>scope</key>
+			<string>source.ruby punctuation.separator.key-value.ruby</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -233,9 +272,35 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>♦ Entity inherited-namespace left arrow</string>
+			<key>scope</key>
+			<string>source.ruby meta.class.ruby punctuation.separator.inheritance.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+				<key>foreground</key>
+				<string>#9B5C2E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>♦ String embedded-source</string>
 			<key>scope</key>
 			<string>string source</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#DAEFA3</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>♦ String embedded-source</string>
+			<key>scope</key>
+			<string>source.ruby string.quoted.double.ruby source.ruby.embedded.source support.function.builtin.ruby</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
