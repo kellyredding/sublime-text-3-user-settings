@@ -64,6 +64,32 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Embedded Actionpack</string>
+			<key>scope</key>
+			<string>text.html.ruby text.html.basic source.ruby.rails.embedded.html support.function.actionpack.rails</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#F8F8F8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>String Embedded Actionpack </string>
+			<key>scope</key>
+			<string>text.html.ruby text.html.basic meta.tag.block.any.html meta.attribute-with-value.class.html string.quoted.double.html meta.class-name.html source.ruby.rails.embedded.html support.function.actionpack.rails</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#DAEFA3</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Entity function</string>
 			<key>scope</key>
 			<string>source.ruby meta.function.ruby entity.name.function.ruby</string>
