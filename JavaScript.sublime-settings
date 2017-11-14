@@ -1,0 +1,8 @@
+// These settings override both User and Default settings for the JavaScript syntax
+{
+  "rulers":
+  [
+    80,
+    100
+  ]
+}
