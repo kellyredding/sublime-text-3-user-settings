@@ -1,4 +1,4 @@
 [
     { "keys": ["command+d"], "command": "refresh", "args": {}, "context": [] },
-    { "keys": ["ctrl+super+r"], "command": "reveal_in_side_bar" },
+    { "keys": ["ctrl+super+r"], "command": "reveal_in_side_bar" }
 ]

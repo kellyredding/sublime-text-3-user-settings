@@ -32,13 +32,25 @@
 	"fold_buttons": false,
 	"folder_exclude_patterns":
 	[
+		".svn",
+		".rbx",
 		".git",
+		".hg",
+		"CVS",
 		".bundle",
-		".rbx"
+		".sass-cache",
+		"cache",
+		".yardoc",
+		"doc",
+		"assets/source_maps",
+		"coverage",
+		"vendor",
+		"public/assets",
+		"node_modules"
 	],
 	"folder_no_icon": true,
 	"font_face": "monaco",
-	"font_size": 10.0,
+	"font_size": 11.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -48,7 +60,24 @@
 	"index_exclude_patterns":
 	[
 		"*.log",
-		".git"
+		".svn",
+		".rbx",
+		".git",
+		".hg",
+		"CVS",
+		".bundle",
+		"log",
+		".sass-cache",
+		"script",
+		"cache",
+		"tmp",
+		".yardoc",
+		"doc",
+		"assets/source_maps",
+		"coverage",
+		"vendor",
+		"public/assets",
+		"node_modules"
 	],
 	"index_files": false,
 	"match_brackets": true,
