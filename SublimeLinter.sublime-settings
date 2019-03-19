@@ -1,0 +1,10 @@
+// SublimeLinter Settings - User
+{
+  "linters": {
+    "rubocop": {
+      "args": [
+        "--config", ".rubocop.local.yml"
+      ]
+    },
+  }
+}

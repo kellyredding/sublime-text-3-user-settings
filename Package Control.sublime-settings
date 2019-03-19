@@ -1,9 +1,19 @@
 {
 	"auto_upgrade_last_run": null,
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
-		"GitGutter",
+		"Copy Relative Path",
+		"ESLint Fix",
+		"File Rename",
 		"Package Control",
-		"Terminal"
+		"SublimeLinter",
+		"SublimeLinter-eslint",
+		"SublimeLinter-rubocop",
+		"SublimeLinter-ruby",
+		"yardoc"
 	]
 }
