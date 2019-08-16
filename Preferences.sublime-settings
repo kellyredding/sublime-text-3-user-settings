@@ -46,6 +46,7 @@
 		"coverage",
 		"vendor",
 		"public/assets",
+		"public/packs",
 		"node_modules"
 	],
 	"folder_no_icon": true,
