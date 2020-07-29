@@ -44,10 +44,10 @@
 		"doc",
 		"assets/source_maps",
 		"coverage",
-		"vendor",
 		"public/assets",
 		"public/packs",
-		"node_modules"
+		"node_modules",
+		"tmp"
 	],
 	"folder_no_icon": true,
 	"font_face": "monaco",
