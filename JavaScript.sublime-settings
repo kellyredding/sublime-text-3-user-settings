@@ -1,5 +1,13 @@
 // These settings override both User and Default settings for the JavaScript syntax
 {
+  "extensions":
+  [
+    "js",
+    "ejs",
+    "jsx",
+    "tf",
+    "hcl"
+  ],
   "rulers":
   [
     80,

@@ -9,12 +9,13 @@
 		"Copy Relative Path",
 		"ESLint Fix",
 		"File Rename",
+		"JSON Reindent",
 		"Package Control",
 		"SublimeLinter",
 		"SublimeLinter-eslint",
 		"SublimeLinter-rubocop",
 		"SublimeLinter-ruby",
 		"Theme - Afterglow",
-		"yardoc"
-	]
+		"yardoc",
+	],
 }
