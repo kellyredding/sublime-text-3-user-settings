@@ -41,7 +41,6 @@
 		".sass-cache",
 		"cache",
 		".yardoc",
-		"doc",
 		"assets/source_maps",
 		"coverage",
 		"public/assets",
