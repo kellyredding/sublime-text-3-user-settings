@@ -1,3 +1,5 @@
 [
-    { "keys": ["ctrl+super+r"], "command": "reveal_in_side_bar" }
+    { "keys": ["ctrl+super+r"], "command": "reveal_in_side_bar" },
+    { "keys": ["super+shift+f"], "command": "show_panel", "args": {"panel": "find_in_files", "case_sensitive": true} },
+    { "keys": ["super+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false, "case_sensitive": true} }
 ]
