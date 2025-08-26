@@ -11,7 +11,10 @@ class CopyPathWithLinesCommand(sublime_plugin.TextCommand):
             sublime.status_message("No file path (unsaved file).")
             return
 
-        # Make path relative to project if possible
+        # Make path fully qualified for clarity sake.
+        file_path = fully_qualified_path
+
+        # Make path relative to project if possible (I ended up not using this)
         # window = view.window()
         # folders = window.folders() if window else []
         # relative_path = fully_qualified_path
@@ -20,7 +23,6 @@ class CopyPathWithLinesCommand(sublime_plugin.TextCommand):
         #         relative_path = os.path.relpath(fully_qualified_path, folder)
         #         break
         # file_path = relative_path
-        file_path = fully_qualified_path
 
         # Handle selections
         parts = []
