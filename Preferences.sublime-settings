@@ -45,12 +45,13 @@
 		"coverage",
 		"public/assets",
 		"public/packs",
+		"public/vite*",
 		"node_modules",
 		"tmp"
 	],
 	"folder_no_icon": true,
 	"font_face": "monaco",
-	"font_size": 11,
+	"font_size": 12,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
